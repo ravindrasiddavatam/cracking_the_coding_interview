@@ -17,6 +17,8 @@ public class Main {
 		l.display();
 		l.deleteLast();
 		l.display();
+		l.deleteLast();
+		l.display();
 
 	}
 
