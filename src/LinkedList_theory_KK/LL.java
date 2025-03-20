@@ -72,6 +72,25 @@ public class LL {
 		}
 		return node;
 	}
+	
+	public int delete(int index){
+		Node prev = get(index - 1);
+		int val = prev.next.val;
+		prev.next = prev.next.next;
+		return val;
+		
+	}
+	
+	public Node find(int value) {
+		Node node = head;
+		while(node != null) {
+			if(node.val  == value) {
+				return node;
+			}
+			node = node.next;
+		}
+		return null;
+	}
 	public void display() {
 		Node temp = head;
 		
@@ -94,6 +113,11 @@ public class LL {
 			this.val = val;
 			this.next = next;
 		}
+		
+		   @Override
+		    public String toString() {
+		        return "Node{" + "val=" + val + '}';
+		    }
 	}
 
 }
