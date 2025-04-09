@@ -27,17 +27,31 @@ public class Main {
 //		System.out.println(l.find(100));
 		
 		
-		CLL l = new CLL();
-		l.insert(2);
-		l.insert(3);
-		l.insert(4);
-		l.insert(5);
-		l.insert(99);
-		l.insert(4);
-		l.display();
-		l.delete(5);
-		l.display();
-
+//		CLL l = new CLL();
+//		l.insert(2);
+//		l.insert(3);
+//		l.insert(4);
+//		l.insert(5);
+//		l.insert(99);
+//		l.insert(4);
+//		l.display();
+//		l.delete(5);
+//		l.display();
+		
+		LL first = new LL();
+		LL second = new LL();
+		
+		first.insertLast(1);
+		first.insertLast(3);
+		first.insertLast(5);
+		
+		second.insertLast(1);
+		second.insertLast(2);
+		second.insertLast(9);
+		second.insertLast(14);
+		
+		LL ans = LL.merge(first, second);
+		ans.display();
 	}
 
 }
